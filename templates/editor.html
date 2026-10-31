@@ -1,0 +1,408 @@
+<div class="storyline_editor storyline_theme storyline_shell">
+    <div class="storyline_shell_head storyline_editor_head">
+        <div class="storyline_editor_hero">
+            <div class="storyline_editor_hero_banner" id="storyline_editor_hero_banner">
+                <i class="fa-solid fa-book-open"></i>
+                <img id="storyline_editor_hero_banner_img" class="storyline_editor_hero_banner_img storyline_hidden" alt="" />
+            </div>
+            <div class="storyline_editor_hero_main">
+                <div class="storyline_editor_hero_eyebrow" id="storyline_editor_hero_eyebrow">New Storyline</div>
+                <div class="storyline_editor_hero_title" id="storyline_editor_hero_title">Untitled Storyline</div>
+            </div>
+            <div class="storyline_editor_hero_chips" id="storyline_editor_hero_chips"></div>
+        </div>
+        <div class="storyline_tabs" role="tablist">
+            <div class="storyline_tab storyline_tab_active" data-tab="story"><i class="fa-solid fa-book-open fa-fw"></i><span>Story</span></div>
+            <div class="storyline_tab" data-tab="openings"><i class="fa-solid fa-flag-checkered fa-fw"></i><span>Openings</span></div>
+            <div class="storyline_tab" data-tab="cast"><i class="fa-solid fa-users fa-fw"></i><span>Cast</span></div>
+            <div class="storyline_tab" data-tab="narration"><i class="fa-solid fa-feather-pointed fa-fw"></i><span>Narration</span></div>
+            <div class="storyline_tab" data-tab="extras"><i class="fa-solid fa-puzzle-piece fa-fw"></i><span>Extras</span></div>
+            <div class="storyline_tab" data-tab="check"><i class="fa-solid fa-list-check fa-fw"></i><span>Check</span><span class="storyline_tab_badge storyline_hidden" id="storyline_check_badge"></span></div>
+        </div>
+    </div>
+
+    <div class="storyline_shell_body">
+    <div class="storyline_tab_panels">
+        <!-- ================= STORY ================= -->
+        <div class="storyline_tab_panel storyline_tab_panel_active" data-panel="story" role="tabpanel">
+            <div class="storyline_card storyline_identity_card">
+                <div class="storyline_identity">
+                    <div class="storyline_identity_banner">
+                        <div class="storyline_banner_preview interactable" id="storyline_banner_drop" title="Upload a banner image">
+                            <img id="storyline_editor_banner_preview" class="storyline_banner_img storyline_banner_empty" alt="" />
+                            <i class="fa-solid fa-image storyline_banner_placeholder"></i>
+                        </div>
+                        <input type="file" id="storyline_editor_banner_input" accept="image/png,image/jpeg,image/webp" />
+                        <div class="storyline_banner_actions">
+                            <div class="menu_button menu_button_icon interactable storyline_act_banner_upload" title="Upload banner"><i class="fa-solid fa-upload fa-fw"></i></div>
+                            <div class="menu_button menu_button_icon interactable storyline_act_banner_remove" title="Remove banner"><i class="fa-solid fa-trash-can fa-fw"></i></div>
+                        </div>
+                    </div>
+                    <div class="storyline_identity_fields">
+                        <label class="storyline_field">
+                            <span class="storyline_field_label">Title</span>
+                            <input type="text" id="storyline_editor_title" class="storyline_control" maxlength="200" placeholder="The Ninth Lamp" />
+                        </label>
+                        <div class="storyline_identity_row">
+                            <label class="storyline_field">
+                                <span class="storyline_field_label">Category</span>
+                                <input id="storyline_editor_category" class="storyline_control" list="storyline_category_list" maxlength="200" placeholder="Fantasy" />
+                            </label>
+                            <label class="storyline_field">
+                                <span class="storyline_field_label">Language</span>
+                                <select id="storyline_editor_language" class="storyline_control">
+                                    <option value="">Auto</option>
+                                    <option value="en">English</option>
+                                    <option value="vi">Vietnamese</option>
+                                    <option value="ja">Japanese</option>
+                                    <option value="zh">Chinese</option>
+                                    <option value="ko">Korean</option>
+                                    <option value="es">Spanish</option>
+                                    <option value="fr">French</option>
+                                    <option value="de">German</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="storyline_field_hint">The banner is the story's avatar in chats. Language also guides generated NPC names.</div>
+                    </div>
+                </div>
+                <datalist id="storyline_category_list">
+                        <option value="Fantasy"></option>
+                        <option value="Adventure"></option>
+                        <option value="Romance"></option>
+                        <option value="Horror"></option>
+                        <option value="Mystery"></option>
+                        <option value="Sci-Fi"></option>
+                        <option value="Slice of Life"></option>
+                        <option value="Historical"></option>
+                        <option value="Comedy"></option>
+                        <option value="Drama"></option>
+                        <option value="Action"></option>
+                        <option value="Thriller"></option>
+                        <option value="Suspense"></option>
+                        <option value="Tragedy"></option>
+                        <option value="Psychological"></option>
+                        <option value="Coming of Age"></option>
+                        <option value="Dark Fantasy"></option>
+                        <option value="High Fantasy"></option>
+                        <option value="Urban Fantasy"></option>
+                        <option value="Sword &amp; Sorcery"></option>
+                        <option value="Mythology"></option>
+                        <option value="Folklore"></option>
+                        <option value="Fairy Tale"></option>
+                        <option value="Cyberpunk"></option>
+                        <option value="Steampunk"></option>
+                        <option value="Space Opera"></option>
+                        <option value="Post-Apocalyptic"></option>
+                        <option value="Apocalyptic"></option>
+                        <option value="Dystopian"></option>
+                        <option value="Zombie"></option>
+                        <option value="Survival"></option>
+                        <option value="Supernatural"></option>
+                        <option value="Paranormal"></option>
+                        <option value="Gothic"></option>
+                        <option value="Cosmic Horror"></option>
+                        <option value="Occult"></option>
+                        <option value="Vampire"></option>
+                        <option value="Detective"></option>
+                        <option value="Noir"></option>
+                        <option value="Spy"></option>
+                        <option value="Heist"></option>
+                        <option value="Political Intrigue"></option>
+                        <option value="Military"></option>
+                        <option value="War"></option>
+                        <option value="Western"></option>
+                        <option value="Pirates"></option>
+                        <option value="Wuxia"></option>
+                        <option value="Xianxia"></option>
+                        <option value="Cultivation"></option>
+                        <option value="Martial Arts"></option>
+                        <option value="Mecha"></option>
+                        <option value="Superhero"></option>
+                        <option value="LitRPG"></option>
+                        <option value="Game World"></option>
+                        <option value="Virtual Reality"></option>
+                        <option value="Time Travel"></option>
+                        <option value="Alternate History"></option>
+                        <option value="Modern Day"></option>
+                        <option value="School Life"></option>
+                        <option value="Romance Fantasy"></option>
+                        <option value="Harem"></option>
+                        <option value="Shonen"></option>
+                        <option value="Shojo"></option>
+                        <option value="Medical"></option>
+                        <option value="Music"></option>
+                    </datalist>
+            </div>
+
+            <div class="storyline_card">
+                <div class="storyline_card_title"><i class="fa-solid fa-quote-left fa-fw"></i> Pitch <span class="storyline_audience storyline_audience_player"><i class="fa-solid fa-eye fa-fw"></i>Players only</span></div>
+                <div class="storyline_field_hint">One or two sentences shown in the Library and on the Start screen. Never sent to the AI.</div>
+                <textarea id="storyline_editor_plot_summary" class="storyline_control storyline_textarea" rows="3" placeholder="In a fog-bound harbor city, nine lighthouses keep the drowned from walking ashore. Tonight the ninth has gone dark, and you were the last to see its keeper alive."></textarea>
+                <div class="storyline_legacy_note storyline_hidden" id="storyline_legacy_plot_user">
+                    <i class="fa-solid fa-box-archive fa-fw"></i>
+                    <div class="storyline_legacy_text">
+                        <b>Older "Plot (User)" text found.</b>
+                        <span id="storyline_legacy_plot_user_meta"></span>
+                        That field was never shown anywhere and is not sent to the AI. Merge it into the Pitch to keep it visible.
+                    </div>
+                    <div class="menu_button interactable storyline_button storyline_act_merge_plot_user"><i class="fa-solid fa-code-merge fa-fw"></i><span>Merge into Pitch</span></div>
+                </div>
+                <textarea id="storyline_editor_plot_user" class="storyline_hidden" aria-hidden="true" tabindex="-1"></textarea>
+            </div>
+
+            <div class="storyline_card">
+                <div class="storyline_card_title"><i class="fa-solid fa-earth-americas fa-fw"></i> World &amp; Plot <span class="storyline_audience storyline_audience_ai"><i class="fa-solid fa-robot fa-fw"></i>Sent to AI</span></div>
+                <div class="storyline_field_hint">The core of the storyline: setting, factions, secrets, where &#123;&#123;user&#125;&#125; stands when the story begins. The AI reads this every turn.</div>
+                <textarea id="storyline_editor_plot_ai" class="storyline_control storyline_textarea" rows="8" placeholder="Saltmere is a fog-bound port run by the Lamplighters' Guild. Nine lighthouses hold back the Tidewalkers, the drowned who rise with the tide.&#10;&#10;Three nights ago the Ninth Lamp went dark and its keeper vanished. &#123;&#123;user&#125;&#125; was the last to see him alive, and the Guild wants answers.&#10;&#10;Secret: Guildmaster Orsa put the lamp out herself, to bargain with what lives under the harbor."></textarea>
+                <div class="storyline_field_meta"><span class="storyline_macro_chip">&#123;&#123;user&#125;&#125;</span><span class="storyline_field_tokens" data-token-live="storyline_editor_plot_ai"></span></div>
+            </div>
+
+            <div class="storyline_card">
+                <div class="storyline_card_title"><i class="fa-solid fa-compass fa-fw"></i> Story Rules <span class="storyline_audience storyline_audience_ai"><i class="fa-solid fa-robot fa-fw"></i>Sent to AI</span></div>
+                <div class="storyline_field_hint">How this world behaves: consequences, fail states, tone limits, no railroading. These rules win over the Narration Style.</div>
+                <textarea id="storyline_editor_prompt_guideline" class="storyline_control storyline_textarea" rows="4" placeholder="Choices have lasting consequences, and death is possible. NPCs pursue their own goals, even off-screen. Keep the supernatural rare and frightening. Never push &#123;&#123;user&#125;&#125; toward one side."></textarea>
+                <div class="storyline_field_meta"><span class="storyline_macro_chip">&#123;&#123;user&#125;&#125;</span><span class="storyline_field_tokens" data-token-live="storyline_editor_prompt_guideline"></span></div>
+            </div>
+
+            <div class="storyline_card">
+                <div class="storyline_card_title"><i class="fa-solid fa-thumbtack fa-fw"></i> Key Facts <span class="storyline_audience storyline_audience_ai"><i class="fa-solid fa-robot fa-fw"></i>Sent to AI</span></div>
+                <div class="storyline_field_hint">Short facts the AI must never forget: secrets, relationships, unresolved threads. Keep it brief — long lists make replies rigid.</div>
+                <textarea id="storyline_editor_ai_reminder" class="storyline_control storyline_textarea" rows="4" placeholder="Orsa put out the Ninth Lamp herself. Tidewalkers cannot cross running fresh water. Wren owes &#123;&#123;user&#125;&#125; a life debt."></textarea>
+                <div class="storyline_field_meta"><span class="storyline_macro_chip">&#123;&#123;user&#125;&#125;</span><span class="storyline_field_tokens" data-token-live="storyline_editor_ai_reminder"></span></div>
+            </div>
+        </div>
+
+        <!-- ================= OPENINGS ================= -->
+        <div class="storyline_tab_panel" data-panel="openings" role="tabpanel">
+            <div class="storyline_card">
+                <div class="storyline_card_title"><i class="fa-solid fa-flag-checkered fa-fw"></i> Openings</div>
+                <div class="storyline_field_hint">The first narration of a new session. With several openings, the player picks one on the Start screen; with none, the story starts blank. Used once — not kept in the running prompt.</div>
+                <div id="storyline_editor_scenarios" class="storyline_row_list"></div>
+                <div class="menu_button interactable storyline_act_add_scenario storyline_button"><i class="fa-solid fa-plus fa-fw"></i><span>Add Opening</span></div>
+            </div>
+        </div>
+
+        <!-- ================= CAST ================= -->
+        <div class="storyline_tab_panel" data-panel="cast" role="tabpanel">
+            <div class="storyline_card">
+                <div class="storyline_card_title"><i class="fa-solid fa-user-astronaut fa-fw"></i> Player</div>
+                <div class="storyline_field_hint">Default card for &#123;&#123;user&#125;&#125; in new sessions — the player can confirm or change it on the Start screen. Its description becomes the player's character sheet; it never speaks.</div>
+                <div class="storyline_player_default">
+                    <div class="storyline_player_avatar" id="storyline_editor_user_card_avatar"><i class="fa-solid fa-user-astronaut fa-fw"></i></div>
+                    <select id="storyline_editor_user_card" class="storyline_control"></select>
+                </div>
+                <div class="storyline_settings_hint" id="storyline_editor_user_card_hint"></div>
+            </div>
+            <div class="storyline_card">
+                <div class="storyline_card_title">
+                    <i class="fa-solid fa-user-group fa-fw"></i> Characters
+                    <span class="storyline_hub_count" id="storyline_editor_cast_count"></span>
+                </div>
+                <div class="storyline_field_hint">Existing character cards that live in this world. They never take turns: a character enters the prompt only when its name (or an alias) appears in recent messages, trimmed to the budget. <b>Always</b> = always in the prompt; <b>Full</b> = the whole card, untrimmed.</div>
+                <div class="storyline_cast_toolbar">
+                    <div class="menu_button interactable storyline_act_add_character storyline_button storyline_button_primary"><i class="fa-solid fa-user-plus fa-fw"></i><span>Add characters</span></div>
+                    <input type="search" id="storyline_cast_filter" class="storyline_control storyline_cast_filter" placeholder="Filter cast…" autocomplete="off" spellcheck="false" />
+                </div>
+                <div id="storyline_editor_characters" class="storyline_cast_list"></div>
+            </div>
+        </div>
+
+        <!-- ================= NARRATION ================= -->
+        <div class="storyline_tab_panel" data-panel="narration" role="tabpanel">
+            <div class="storyline_card">
+                <div class="storyline_card_title"><i class="fa-solid fa-feather fa-fw"></i> Narration Style <span class="storyline_audience storyline_audience_ai"><i class="fa-solid fa-robot fa-fw"></i>Sent to AI</span></div>
+                <div class="storyline_field_hint">HOW the storyteller writes: voice, prose, pacing, output format. The built-in style works well; customize it to give this story its own voice.</div>
+                <input type="hidden" id="storyline_editor_storyteller_prompt" />
+                <div class="storyline_row_button interactable" id="storyline_open_storyteller">
+                    <div class="storyline_row_button_icon"><i class="fa-solid fa-feather-pointed fa-fw"></i></div>
+                    <div class="storyline_row_button_text" id="storyline_storyteller_row_label">Built-in style</div>
+                    <i class="fa-solid fa-chevron-right fa-fw"></i>
+                </div>
+            </div>
+            <div class="storyline_card">
+                <div class="storyline_card_title"><i class="fa-solid fa-eye fa-fw"></i> Perspective &amp; Label</div>
+                <div class="storyline_field_row">
+                    <div class="storyline_field_text">
+                        <div class="storyline_field_label">Default perspective</div>
+                        <div class="storyline_field_hint">How the narrator addresses the player in new sessions (changeable per chat in the Story Hub).</div>
+                    </div>
+                    <select id="storyline_editor_default_perspective" class="storyline_control storyline_control_narrow">
+                        <option value="first">1st person — "I"</option>
+                        <option value="second">2nd person — "you"</option>
+                        <option value="third">3rd person — "they"</option>
+                    </select>
+                </div>
+                <div class="storyline_field_row">
+                    <div class="storyline_field_text">
+                        <div class="storyline_field_label">Speaker label</div>
+                        <div class="storyline_field_hint">Name shown on story messages in the chat (display only).</div>
+                    </div>
+                    <input type="text" id="storyline_editor_speaker_label" class="storyline_control storyline_control_narrow" maxlength="60" placeholder="Narrator" />
+                </div>
+            </div>
+            <div class="storyline_card">
+                <div class="storyline_card_title"><i class="fa-solid fa-square-check fa-fw"></i> Output Reminder <span class="storyline_audience storyline_audience_ai"><i class="fa-solid fa-robot fa-fw"></i>Sent to AI</span></div>
+                <div class="storyline_field_hint">Placed at the very end of the prompt, right before the reply. Best for output shape: length, trackers, strict formatting. Empty = built-in reminder.</div>
+                <textarea id="storyline_editor_ai_output_reminder" class="storyline_control storyline_textarea" rows="4" placeholder="Empty = built-in reminder. Example: Keep each reply under 250 words. End every reply with [Day · Time · Place]."></textarea>
+                <div class="storyline_field_meta"><span class="storyline_macro_chip">&#123;&#123;user&#125;&#125;</span><span class="storyline_field_tokens" data-token-live="storyline_editor_ai_output_reminder"></span></div>
+            </div>
+        </div>
+
+        <!-- ================= EXTRAS ================= -->
+        <div class="storyline_tab_panel" data-panel="extras" role="tabpanel">
+            <div class="storyline_field_hint storyline_extras_intro">Optional power features. A storyline works perfectly without any of them.</div>
+            <details class="storyline_card storyline_details" id="storyline_details_lorebooks">
+                <summary class="storyline_card_title"><i class="fa-solid fa-book-atlas fa-fw"></i> Linked Lorebooks <span class="storyline_hub_count" id="storyline_lorebooks_count"></span><i class="fa-solid fa-chevron-down fa-fw storyline_details_chevron"></i></summary>
+                <div class="storyline_field_hint">Link World Info files. <b>Smart</b> injects entries whose keys appear in the last messages (constant entries always); <b>Full</b> injects every enabled entry. In a Storyline chat this is the only way World Info reaches the AI.</div>
+                <div id="storyline_editor_lorebooks" class="storyline_row_list"></div>
+                <div class="menu_button interactable storyline_act_add_lorebook storyline_button"><i class="fa-solid fa-plus fa-fw"></i><span>Link Lorebook</span></div>
+            </details>
+
+            <details class="storyline_card storyline_details" id="storyline_details_functions">
+                <summary class="storyline_card_title"><i class="fa-solid fa-wand-magic-sparkles fa-fw"></i> Story Functions <span class="storyline_alpha_chip">ALPHA</span><span class="storyline_hub_count" id="storyline_functions_count"></span><i class="fa-solid fa-chevron-down fa-fw storyline_details_chevron"></i></summary>
+                <div class="storyline_field_hint">Tools and context the story AI can use: NPC name generator, world state, dice, memories. Most need a companion extension.</div>
+                <input type="hidden" id="storyline_editor_functions_json" />
+                <div class="storyline_row_button interactable" id="storyline_open_functions">
+                    <div class="storyline_row_button_icon"><i class="fa-solid fa-wand-magic-sparkles fa-fw"></i></div>
+                    <div class="storyline_row_button_text" id="storyline_functions_row_label">None added</div>
+                    <i class="fa-solid fa-chevron-right fa-fw"></i>
+                </div>
+                <label class="storyline_field">
+                    <span class="storyline_field_label">Game mechanics <span class="storyline_audience storyline_audience_ai"><i class="fa-solid fa-robot fa-fw"></i>Sent while functions are on</span></span>
+                    <span class="storyline_field_hint">Rules the AI applies when functions are active: combat formulas, economies, win conditions.</span>
+                    <textarea id="storyline_editor_functions_prompt" class="storyline_control storyline_textarea" rows="4" maxlength="8000" placeholder="Example: Risky actions roll a d20 and succeed on 11+. Lamp oil is the currency: one flask buys a night's lodging."></textarea>
+                </label>
+                <label class="storyline_field">
+                    <span class="storyline_field_label">Functions reminder</span>
+                    <span class="storyline_field_hint">Short reminder near the end of the prompt while functions are active. Empty = built-in.</span>
+                    <textarea id="storyline_editor_functions_reminder" class="storyline_control storyline_textarea" rows="3" maxlength="1000" placeholder="Empty = built-in reminder."></textarea>
+                </label>
+            </details>
+
+            <details class="storyline_card storyline_details" id="storyline_details_budget">
+                <summary class="storyline_card_title"><i class="fa-solid fa-sliders fa-fw"></i> Context Budget<i class="fa-solid fa-chevron-down fa-fw storyline_details_chevron"></i></summary>
+                <div class="storyline_field_hint">How much room character cards get in the prompt. Defaults suit most models.</div>
+                <div class="storyline_grid">
+                    <label class="storyline_field">
+                        <span class="storyline_field_label">Tokens per character</span>
+                        <input type="number" id="storyline_editor_max_tokens_per_char" class="storyline_control" min="50" max="8000" step="50" />
+                    </label>
+                    <label class="storyline_field">
+                        <span class="storyline_field_label">Total character tokens</span>
+                        <input type="number" id="storyline_editor_max_total_char_tokens" class="storyline_control" min="100" max="32000" step="100" />
+                    </label>
+                    <label class="storyline_field">
+                        <span class="storyline_field_label">Name scan (messages)</span>
+                        <input type="number" id="storyline_editor_relevance_window" class="storyline_control" min="1" max="50" step="1" />
+                    </label>
+                </div>
+            </details>
+        </div>
+
+        <!-- ================= CHECK ================= -->
+        <div class="storyline_tab_panel" data-panel="check" role="tabpanel">
+            <div class="storyline_card">
+                <div class="storyline_card_title"><i class="fa-solid fa-list-check fa-fw"></i> Readiness</div>
+                <div class="storyline_readiness" id="storyline_readiness"></div>
+            </div>
+            <div class="storyline_card">
+                <div class="storyline_card_title"><i class="fa-solid fa-calculator fa-fw"></i> Prompt Size</div>
+                <div class="storyline_token_rows">
+                    <div class="storyline_token_row" data-token-for="storyline_editor_storyteller_prompt"><span>Narration Style</span><b>0</b></div>
+                    <div class="storyline_token_row" data-token-for="storyline_editor_plot_ai"><span>World &amp; Plot</span><b>0</b></div>
+                    <div class="storyline_token_row" data-token-for="storyline_editor_prompt_guideline"><span>Story Rules</span><b>0</b></div>
+                    <div class="storyline_token_row" data-token-for="storyline_editor_ai_reminder"><span>Key Facts</span><b>0</b></div>
+                    <div class="storyline_token_row" data-token-for="storyline_editor_ai_output_reminder"><span>Output Reminder</span><b>0</b></div>
+                    <div class="storyline_token_row" data-token-for="storyline_editor_functions_prompt"><span>Game mechanics</span><b>0</b></div>
+                    <div class="storyline_token_row" data-token-for="storyline_editor_functions_reminder"><span>Functions reminder</span><b>0</b></div>
+                    <div class="storyline_token_row storyline_token_total"><span>Fixed prompt total</span><b id="storyline_token_total">0</b></div>
+                </div>
+                <div class="storyline_token_note">Used once, not in the running prompt</div>
+                <div class="storyline_token_row"><span>Openings</span><b id="storyline_token_scenarios">0</b></div>
+                <div class="storyline_field_hint storyline_token_hint">Rough estimate (~4 characters per token). Characters, lorebooks and extension blocks are added per turn on top of this. Keeping the fixed total under ~2k tokens leaves the most room for the story itself.</div>
+            </div>
+            <div class="storyline_card">
+                <div class="storyline_card_title"><i class="fa-solid fa-plug fa-fw"></i> Functions &amp; Integrations</div>
+                <div class="storyline_field_hint">What sessions will actually run on THIS SillyTavern. A function whose companion extension is not ready is left out of the prompt — the story still works without it.</div>
+                <div class="storyline_detail_rows" id="storyline_publish_functions">
+                    <div class="storyline_token_row"><span>(none added)</span><b>—</b></div>
+                </div>
+            </div>
+            <div class="storyline_card">
+                <div class="storyline_card_title"><i class="fa-solid fa-file-export fa-fw"></i> Share</div>
+                <div class="storyline_field_hint">Download as JSON (includes unsaved edits). Linked characters travel as lightweight references — character cards are never embedded.</div>
+                <div class="menu_button interactable storyline_act_export storyline_button"><i class="fa-solid fa-download fa-fw"></i><span>Export JSON</span></div>
+                <div class="storyline_detail_rows storyline_detail_small">
+                    <div class="storyline_token_row"><span>ID</span><b id="storyline_detail_id">—</b></div>
+                    <div class="storyline_token_row"><span>Created</span><b id="storyline_detail_created">—</b></div>
+                    <div class="storyline_token_row"><span>Modified</span><b id="storyline_detail_modified">—</b></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="storyline_subview" id="storyline_storyteller_subview">
+        <div class="storyline_subview_header">
+            <div class="storyline_subview_back interactable" id="storyline_storyteller_back" title="Back (keeps your edits)"><i class="fa-solid fa-arrow-left fa-fw"></i></div>
+            <div class="storyline_subview_title">Narration Style</div>
+        </div>
+        <div class="storyline_subview_banner">
+            <i class="fa-solid fa-feather-pointed fa-fw"></i>
+            <span>These instructions define HOW the story AI writes: its persona, prose style, pacing and role-play rules. World, plot and characters stay in the Story and Cast tabs — this is the writing style only. Back keeps your edits; Save Storyline stores them.</span>
+        </div>
+        <div class="storyline_state_chip" id="storyline_storyteller_state"><i class="fa-solid fa-shield-halved fa-fw"></i><span>Using the built-in style</span></div>
+        <div class="storyline_accordion" id="storyline_storyteller_how">
+            <div class="storyline_accordion_head interactable">
+                <i class="fa-solid fa-cube fa-fw"></i><span>How it works</span><i class="fa-solid fa-chevron-down fa-fw"></i>
+            </div>
+            <div class="storyline_accordion_body">
+                The <b>built-in style</b> is a complete writing style: the player keeps control of their character, the world reacts and pushes back, characters only know what they could know, plus prose craft and output format. Your custom text fully replaces it. <b>Story Rules</b> (Story tab) always win over conflicting rules here, and the <b>perspective</b> directive is appended automatically — don't write it yourself. Limit: 10,000 tokens (~40,000 characters), counted live below the editor.
+            </div>
+        </div>
+        <div class="storyline_field">
+            <span class="storyline_field_label">Writing style instructions</span>
+            <textarea id="storyline_storyteller_textarea" class="storyline_control storyline_textarea storyline_textarea_monospace" rows="18" maxlength="40000"></textarea>
+            <div class="storyline_token_counter" id="storyline_storyteller_counter">≈ 0 / 10,000 tokens</div>
+        </div>
+        <div class="storyline_subview_footer">
+            <div class="menu_button interactable storyline_act_reset_prompt"><i class="fa-solid fa-rotate-left fa-fw"></i><span>Use built-in style</span></div>
+            <div class="menu_button interactable storyline_act_apply_prompt storyline_apply_button"><i class="fa-solid fa-check fa-fw"></i><span>Done</span></div>
+        </div>
+    </div>
+
+    <div class="storyline_subview" id="storyline_functions_subview">
+        <div class="storyline_subview_header">
+            <div class="storyline_subview_back interactable" id="storyline_functions_back" title="Back to editor"><i class="fa-solid fa-arrow-left fa-fw"></i></div>
+            <div class="storyline_subview_title">Story Functions</div>
+        </div>
+        <div class="storyline_subview_banner storyline_subview_banner_warning">
+            <i class="fa-solid fa-vial fa-fw"></i>
+            <span>Functions are in alpha and subject to breaking changes: behavior, settings and stored data may change as the feature evolves.</span>
+        </div>
+        <div class="storyline_state_chip" id="storyline_functions_state"><i class="fa-solid fa-shield-halved fa-fw"></i><span>No functions added</span></div>
+        <div class="storyline_accordion" id="storyline_functions_how">
+            <div class="storyline_accordion_head interactable">
+                <i class="fa-solid fa-cube fa-fw"></i><span>How it works</span><i class="fa-solid fa-chevron-down fa-fw"></i>
+            </div>
+            <div class="storyline_accordion_body">
+                <ol>
+                    <li>Functions are real tools the story AI can call while writing. Only functions you add here exist in this storyline's chats.</li>
+                    <li>Pick a mode to <b>add</b> a function: <b>Off by default</b> / <b>On by default</b> set how new chats start (players can switch it in the Story Hub). <b>Always on</b> locks it on. <b>Remove</b> takes it out of this storyline.</li>
+                    <li>Functions need a model that supports function calling. When a tool is unavailable, its guidance still appears but the AI is told not to fake tool results.</li>
+                    <li><b>Custom instruction</b> replaces the platform's default guidance for that function. Keep it about WHEN the function should be used. Real game mechanics (combat formulas, economies, win conditions) belong in <b>Game mechanics</b> on the Extras tab, which the AI sees whenever functions are active.</li>
+                </ol>
+            </div>
+        </div>
+        <div class="storyline_tip_row">
+            <i class="fa-solid fa-lightbulb fa-fw"></i>
+            <span>Use Always on only when the story depends on the function. Otherwise prefer On by default so players keep the choice.</span>
+        </div>
+        <div id="storyline_functions_catalog" class="storyline_function_catalog"></div>
+        <div class="storyline_subview_footer">
+            <div class="menu_button interactable storyline_act_functions_done storyline_apply_button">Done</div>
+        </div>
+    </div>
+    </div>
+</div>

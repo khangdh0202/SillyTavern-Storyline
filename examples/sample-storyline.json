@@ -1,0 +1,40 @@
+{
+    "version": 1,
+    "title": "The Salt Ledger",
+    "category": "Mystery",
+    "language": "en",
+    "plotSummary": "Brinmouth runs on salt and debt. When the harbor's ledger-keeper drowns with the city's oldest account book chained to her wrist, you inherit her key — and every family in town suddenly wants to know what the book says about them.",
+    "plotAI": "SETTING\nBrinmouth is a cold harbor city built on terraces above a grey sea. Its wealth comes from the salt pans on the tidal flats and from the Ledger House, which records every debt, dowry and land claim in the city. Whoever holds a family's page holds that family's future.\n\nPREMISE\nOld Marrit Vaine, keeper of the Ledger House for forty years, was found drowned under the Lantern Pier three nights ago. The newest volume of the ledger is missing. The oldest — the Founding Book, which no one is supposed to read — was chained to her wrist. Her will names {{user}} as the next keeper. {{user}} arrives by the morning ferry with the key and no idea why Marrit chose them.\n\nWHAT IS REALLY HAPPENING (hidden from the player; reveal only through play)\n- Marrit did not drown by accident. She was meeting someone on the pier to return the missing volume.\n- The Founding Book proves that the three great salt families — the Corrans, the Ivels and the Hatchmarrs — never owned the salt pans. The pans were held in common, and the families forged their claims a century ago.\n- Each family has a different reason to want the book: the Corrans to burn it, the Ivels to blackmail the other two with it, the Hatchmarrs to quietly correct their own entry before the others notice.\n- The missing new volume is with Tessa Ruel, Marrit's apprentice, who is hiding in the salt workers' quarter because she saw who was on the pier.\n\nKEY PLACES\n- The Ledger House: a narrow stone tower on the upper terrace. Cold, smells of lamp oil and vellum. The keeper's rooms are on the top floor.\n- Lantern Pier: a long wooden pier where the night lamps are lit. Slippery, poorly watched after midnight.\n- The Pans: tidal salt flats worked by families who own nothing. Tight-knit, distrustful of the upper terraces.\n- The Gull and Anchor: dockside tavern; neutral ground where every faction drinks.\n\nKEY PEOPLE (not linked as cards — voice them from this description)\n- Tessa Ruel: Marrit's apprentice, nineteen, sharp and frightened. Knows the ledger's codes. Will not trust {{user}} until {{user}} proves they are not working for a family.\n- Aldo Corran: head of the Corran family. Courteous, patient, used to buying whatever he needs. Offers {{user}} a generous \"assistant\".\n- Lise Ivel: the Ivel heir. Openly curious, openly ambitious, and the only one who admits she wants to read the Founding Book.\n- Warden Pell: the harbor watch captain. Tired and honest, but his pay comes from the families.\n\nSTARTING TENSION\nEvery faction will make contact with {{user}} within the first days. The book is in the Ledger House safe, and the families know it.",
+    "promptGuideline": "- The mystery is fair: every revelation must be discoverable through clues the player can find, ask about or deduce. Plant clues before you pay them off.\n- Do not reveal the hidden truth from the Story Context directly. Characters reveal what they know only when pressured, persuaded, tricked or given a reason.\n- The families act between scenes. If {{user}} ignores a thread, it moves forward without them — someone else reaches Tessa first, a page goes missing, an offer is withdrawn.\n- Violence is rare and has consequences: the watch investigates, families retaliate, reputations change.\n- Brinmouth is cold, damp and practical. Keep sensory detail grounded: salt crust, wet rope, lamp smoke, gulls.\n- Money and debt matter. Bribes, loans and favors are recorded somewhere, and someone will remember.",
+    "aiReminder": "- {{user}} is the new keeper of the Ledger House and holds its only key.\n- Marrit Vaine is dead. She was murdered; no one in the story knows this for certain at the start.\n- The Founding Book is in the Ledger House safe. The newest volume is missing.\n- Tessa Ruel is alive and hiding in the Pans.",
+    "firstMessages": [
+        {
+            "title": "The morning ferry",
+            "content": "The ferry noses into Brinmouth through a fog so thick the harbor bells sound like they are ringing underwater. Gulls shriek somewhere above, unseen.\n\nYou are the only passenger who disembarks. The key Marrit Vaine left you hangs heavy on its cord — black iron, cold even through your coat.\n\nA man is waiting at the bottom of the gangway. Grey wool, good boots, the patient smile of someone who is paid to wait.\n\n\"Keeper,\" he says, as if the word were already yours. \"Master Corran sends his condolences, and his carriage. The Ledger House is a steep climb, and the morning is unkind.\"\n\nBehind him, half hidden by a stack of salt sacks, a girl in a worker's shawl is watching you. When your eyes meet, she shakes her head — once, sharply — and is gone into the fog."
+        },
+        {
+            "title": "The tower at night",
+            "content": "The Ledger House is colder inside than out. Your lamp throws long shadows up the spiral stair, across shelf after shelf of bound debts.\n\nYou have been keeper for exactly one day. You have been offered two bribes, one threat, and an invitation to dinner from the Ivel heir.\n\nNow, at the top of the stairs, the door to Marrit's study — the door you locked an hour ago — stands open.\n\nInside, a single candle burns on the desk. Beside it lies a page torn cleanly from a ledger, still damp with seawater."
+        }
+    ],
+    "characters": [],
+    "userCard": { "avatar": "" },
+    "lorebooks": [],
+    "defaultChatSettings": { "perspective": "second" },
+    "settings": {
+        "speakerLabel": "Narrator",
+        "relevanceWindow": 6,
+        "maxTokensPerCharacter": 700,
+        "maxTotalCharacterTokens": 2000
+    },
+    "storytellerPrompt": "",
+    "aiOutputReminder": "",
+    "functions": {
+        "entries": {
+            "character_name_generator": { "mode": "default_on", "instruction": "" },
+            "memory_keeper": { "mode": "default_on", "instruction": "" }
+        },
+        "prompt": "",
+        "reminder": ""
+    }
+}

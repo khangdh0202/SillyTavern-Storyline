@@ -1,0 +1,24 @@
+<div class="storyline_manager storyline_theme storyline_shell">
+    <div class="storyline_shell_head">
+        <div class="storyline_shell_titlebar">
+            <div class="storyline_shell_title">
+                <i class="fa-solid fa-book-open fa-fw"></i>
+                <span>Story Library</span>
+                <span class="storyline_hub_count" id="storyline_mgr_count"></span>
+            </div>
+            <div class="storyline_shell_titleactions">
+                <div class="menu_button interactable storyline_act_new storyline_button storyline_button_primary"><i class="fa-solid fa-plus fa-fw"></i><span>New</span></div>
+                <div class="menu_button interactable storyline_act_import storyline_button"><i class="fa-solid fa-file-import fa-fw"></i><span>Import</span></div>
+                <label class="storyline_mgr_lang" title="Interface language"><i class="fa-solid fa-language fa-fw"></i><select id="storyline_mgr_lang" class="storyline_control" aria-label="Interface language"></select></label>
+            </div>
+        </div>
+        <div class="storyline_mgr_active" id="storyline_mgr_hero"></div>
+        <div class="storyline_mgr_toolbar_row">
+            <input type="search" id="storyline_mgr_search" class="storyline_control storyline_mgr_search" placeholder="Search title, category or pitch…" autocomplete="off" spellcheck="false" />
+            <select id="storyline_mgr_filter" class="storyline_control storyline_mgr_filter"></select>
+        </div>
+    </div>
+    <div class="storyline_shell_body">
+        <div class="storyline_list" id="storyline_mgr_list"></div>
+    </div>
+</div>

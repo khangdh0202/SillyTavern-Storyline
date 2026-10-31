@@ -1,0 +1,36 @@
+# Local-only working folders (backups, agent notes, tests)
+BK/
+local/
+test/
+
+# AI agent / assistant files
+AGENTS.md
+AGENT.md
+SKILL.md
+CLAUDE.md
+.claude/
+.kilo/
+.cursor/
+
+# Secrets and environment
+.env
+.env.*
+*.pem
+*.key
+secrets.*
+
+# Dependencies, logs, scratch
+node_modules/
+coverage/
+*.log
+*.bak
+*.tmp
+
+# OS / editor
+Thumbs.db
+Desktop.ini
+.DS_Store
+.vscode/
+.idea/
+*.code-workspace
+*.lnk

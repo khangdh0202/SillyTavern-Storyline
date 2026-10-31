@@ -1,0 +1,87 @@
+<div class="storyline_hub storyline_theme">
+    <div class="storyline_hub_hero">
+        <div class="storyline_hub_banner" id="storyline_hub_banner">
+            <i class="fa-solid fa-book-open storyline_hub_banner_fallback"></i>
+            <img id="storyline_hub_banner_img" class="storyline_hub_banner_img storyline_hidden" alt="" />
+        </div>
+        <div class="storyline_hub_hero_main">
+            <div class="storyline_hub_title" id="storyline_hub_title">Storyline</div>
+            <div class="storyline_hub_sub" id="storyline_hub_sub"></div>
+            <div class="storyline_hub_chips" id="storyline_hub_chips"></div>
+        </div>
+    </div>
+
+    <div class="storyline_hub_actions" id="storyline_hub_actions"></div>
+
+    <div class="storyline_card storyline_settings_section">
+        <div class="storyline_hub_card_head">
+            <div class="storyline_settings_label"><i class="fa-solid fa-gauge-high fa-fw"></i> Prompt budget</div>
+            <div id="storyline_hub_measure_slot"></div>
+        </div>
+        <div id="storyline_hub_stats"></div>
+    </div>
+
+    <div class="storyline_card storyline_settings_section">
+        <div class="storyline_settings_label" id="storyline_perspective_label"><i class="fa-solid fa-eye fa-fw"></i> Perspective</div>
+        <div class="storyline_perspective_options" id="storyline_perspective_group" aria-labelledby="storyline_perspective_label">
+            <div class="storyline_perspective_option menu_button interactable" data-value="first">1st — "I"</div>
+            <div class="storyline_perspective_option menu_button interactable" data-value="second">2nd — "you"</div>
+            <div class="storyline_perspective_option menu_button interactable" data-value="third">3rd — "they"</div>
+        </div>
+        <div class="storyline_settings_hint">How the storyteller addresses you in this chat. Applies from the next message.</div>
+    </div>
+
+    <div class="storyline_card storyline_settings_section" id="storyline_hub_functions_card">
+        <div class="storyline_settings_label"><i class="fa-solid fa-wand-magic-sparkles fa-fw"></i> Story Functions <span class="storyline_alpha_chip">ALPHA</span></div>
+        <div id="storyline_functions_toggles" class="storyline_function_toggles"></div>
+        <div class="storyline_settings_hint storyline_function_warning storyline_hidden" id="storyline_functions_warning">
+            <i class="fa-solid fa-triangle-exclamation fa-fw"></i>
+            <span>The current model or API does not support function calling — tool functions cannot run right now (context-only ones still work).</span>
+        </div>
+    </div>
+
+    <div class="storyline_card storyline_settings_section">
+        <div class="storyline_hub_card_head">
+            <div class="storyline_settings_label"><i class="fa-solid fa-users fa-fw"></i> Cast</div>
+            <div class="storyline_hub_count" id="storyline_hub_cast_count"></div>
+        </div>
+        <div id="storyline_hub_cast" class="storyline_hub_cast"></div>
+    </div>
+
+    <div class="storyline_card storyline_settings_section" id="storyline_hub_npc_card">
+        <div class="storyline_hub_card_head">
+            <div class="storyline_settings_label"><i class="fa-solid fa-user-plus fa-fw"></i> Story NPCs</div>
+            <div class="storyline_hub_count" id="storyline_hub_npc_count"></div>
+        </div>
+        <div class="storyline_field_hint">Side characters named during play (by the name generator). The storyteller reuses these exact spellings. Remove one only if it left the story for good.</div>
+        <div class="storyline_hub_toolbar">
+            <input type="search" id="storyline_hub_npc_search" class="storyline_control storyline_hub_search" placeholder="Search NPCs by name, trait or context…" autocomplete="off" spellcheck="false" />
+        </div>
+        <div id="storyline_npc_list" class="storyline_npc_list"></div>
+    </div>
+
+    <details class="storyline_card storyline_settings_section storyline_details" id="storyline_hub_prompts">
+        <summary class="storyline_settings_label"><i class="fa-solid fa-feather-pointed fa-fw"></i> This chat's prompt overrides <span class="storyline_hub_count" id="storyline_hub_prompts_state"></span><i class="fa-solid fa-chevron-down fa-fw storyline_details_chevron"></i></summary>
+        <div class="storyline_field_hint">Change the writing style or output reminder for THIS chat only. Empty = follow the storyline.</div>
+        <div class="storyline_row_button interactable" id="storyline_chat_open_storyteller">
+            <div class="storyline_row_button_icon"><i class="fa-solid fa-feather-pointed fa-fw"></i></div>
+            <div class="storyline_row_button_text">
+                <div class="storyline_row_button_title">Narration Style</div>
+                <div class="storyline_row_button_subtitle">Voice, prose, pacing and format of the narration.</div>
+            </div>
+            <div class="storyline_row_button_meta" id="storyline_chat_storyteller_meta">Follows storyline</div>
+            <i class="fa-solid fa-pen-to-square fa-fw"></i>
+        </div>
+        <div class="storyline_row_button interactable" id="storyline_chat_open_reminder">
+            <div class="storyline_row_button_icon"><i class="fa-solid fa-square-check fa-fw"></i></div>
+            <div class="storyline_row_button_text">
+                <div class="storyline_row_button_title">Output Reminder</div>
+                <div class="storyline_row_button_subtitle">The last instruction before each reply — length, trackers, format.</div>
+            </div>
+            <div class="storyline_row_button_meta" id="storyline_chat_reminder_meta">Follows storyline</div>
+            <i class="fa-solid fa-pen-to-square fa-fw"></i>
+        </div>
+    </details>
+
+    <div class="storyline_hub_footer" id="storyline_hub_footer"></div>
+</div>

@@ -1,0 +1,9 @@
+{
+    "display_name": "Storyline",
+    "loading_order": 100,
+    "js": "index.js",
+    "css": "style.css",
+    "author": "kdturtle",
+    "version": "0.2.0"
+}
+
