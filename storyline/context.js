@@ -389,7 +389,13 @@ export async function buildStorylineContext({ type = 'normal', options = {} } = 
         const functionsReminder = storyline.functions?.reminder?.trim() || DEFAULT_FUNCTIONS_REMINDER;
         tailInstructions += '\n\n' + substituteParams(functionsReminder);
     }
-    if (type === 'continue') {
+    /* Continue only means "extend the last reply" when the last message IS a
+       story reply. After a tool-only turn the last message is a system
+       message (e.g. a dice card) that history skips, so the model would
+       "continue" the player's message — it echoed it, then narrated. Write
+       the next reply instead. */
+    const lastMessage = chat[chat.length - 1];
+    if (type === 'continue' && lastMessage && !lastMessage.is_user && !lastMessage.is_system) {
         tailInstructions += '\n\n' + CONTINUE_INSTRUCTION;
     }
     if (type === 'impersonate') {
