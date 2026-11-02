@@ -6,6 +6,8 @@
 
 [🌐 English](README.md) | [🇻🇳 Tiếng Việt](README.vi.md) · [📖 Full Documentation (EN)](USER_GUIDE.md) · [📖 Tài liệu đầy đủ (VI)](USER_GUIDE.vi.md)
 
+<img src="docs/screenshots/storyteller-chat.webp" alt="Storyline: storyteller narration with a dice roll and a stat change card" width="680">
+
 </div>
 
 ---
@@ -51,6 +53,10 @@ Storyline:       a story is being narrated around me.
 - **Story Hub** — a live dashboard button next to the chat input: prompt budget bar, perspective (1st/2nd/3rd person), function toggles, cast, recorded NPCs and per-chat prompt overrides.
 - **Sessions with real names** — chats are named `"<Story Title> #<session number>"`, the story banner becomes the chat's avatar, and the "Narrator" chip replaces the host card's name.
 - **Built-in functions (alpha)** — Character Name Generator (with a real tool), World State, Dice Roller, Memory Keeper. Toggle per story, per chat.
+
+<p align="center"><img src="docs/screenshots/story-hub.webp" alt="Storyline Story Hub" width="360"></p>
+
+<p align="center"><em>The Story Hub: perspective, prompt budget and per-chat function toggles.</em></p>
 
 ## Design principles
 

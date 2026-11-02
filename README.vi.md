@@ -6,6 +6,8 @@
 
 [🌐 English](README.md) | [🇻🇳 Tiếng Việt](README.vi.md) · [📖 Tài liệu đầy đủ (VI)](USER_GUIDE.vi.md) · [📖 Full Documentation (EN)](USER_GUIDE.md)
 
+<img src="docs/screenshots/storyteller-chat.webp" alt="Storyline: storyteller narration with a dice roll and a stat change card" width="680">
+
 </div>
 
 ---
@@ -51,6 +53,10 @@ Storyline:       một câu chuyện đang được kể quanh tôi.
 - **Story Hub** — nút dashboard trực tiếp cạnh ô nhập chat: thanh prompt budget, góc nhìn (ngôi 1/2/3), công tắc function, cast, NPC đã ghi và override prompt theo chat.
 - **Session có tên thật** — chat được đặt tên `"<Tên Truyện> #<số session>"`, banner truyện thành avatar của chat, chip "Narrator" thay tên host card.
 - **Functions có sẵn (alpha)** — Character Name Generator (có tool thật), World State, Dice Roller, Memory Keeper. Bật/tắt theo truyện, theo chat.
+
+<p align="center"><img src="docs/screenshots/story-hub.webp" alt="Storyline Story Hub" width="360"></p>
+
+<p align="center"><em>Story Hub: ngôi kể, ngân sách prompt và bật/tắt chức năng cho từng chat.</em></p>
 
 ## Triết lý thiết kế
 
