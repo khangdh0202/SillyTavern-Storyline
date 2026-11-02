@@ -2,6 +2,14 @@ export const STORAGE_KEY = 'storyline';
 export const CHAT_METADATA_KEY = 'storyline';
 export const SCHEMA_VERSION = 1;
 
+/* Extension folder as SillyTavern sees it (e.g. 'third-party/SillyTavern-Storyline').
+   Derived from this module's URL because ST names the install folder after the
+   repo, so a hardcoded 'third-party/Storyline' 404s on every template load. */
+export const EXTENSION_FOLDER = (() => {
+    const match = new URL('..', import.meta.url).pathname.match(/\/scripts\/extensions\/(.+?)\/?$/);
+    return match ? decodeURIComponent(match[1]) : 'third-party/Storyline';
+})();
+
 export const PERSPECTIVES = {
     FIRST: 'first',
     SECOND: 'second',

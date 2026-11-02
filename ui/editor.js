@@ -1,4 +1,5 @@
 import { renderExtensionTemplateAsync } from '../../../../../scripts/extensions.js';
+import { EXTENSION_FOLDER } from '../storyline/constants.js';
 import { Popup, POPUP_TYPE, POPUP_RESULT, callGenericPopup } from '../../../../../scripts/popup.js';
 import { getContext } from '../../../../../scripts/st-context.js';
 import { uuidv4 } from '../../../../../scripts/utils.js';
@@ -1252,7 +1253,7 @@ async function openStorylineEditorInner(storylineId, { onSaved } = {}) {
     const storyline = base ? structuredClone(base) : createDefaultStoryline();
     const originalBanner = String(storyline.banner ?? '');
 
-    const content = await renderExtensionTemplateAsync('third-party/Storyline', 'templates/editor');
+    const content = await renderExtensionTemplateAsync(EXTENSION_FOLDER, 'templates/editor');
     const root = $(content)[0];
     localizeTree(root);
     root.querySelector('#storyline_editor_hero_eyebrow').textContent = base ? tr('Editing storyline') : tr('New storyline');

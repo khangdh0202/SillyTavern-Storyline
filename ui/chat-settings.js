@@ -2,7 +2,7 @@ import { renderExtensionTemplateAsync } from '../../../../../scripts/extensions.
 import { Popup, POPUP_TYPE, POPUP_RESULT, callGenericPopup } from '../../../../../scripts/popup.js';
 import { getContext } from '../../../../../scripts/st-context.js';
 import { getThumbnailUrl } from '../../../../../script.js';
-import { PERSPECTIVE_LABELS, VALID_PERSPECTIVES, BUILT_IN_FUNCTIONS, FUNCTION_MODE_LABELS, FUNCTION_MODE_HINTS, DEFAULT_STORYTELLER_PROMPT, DEFAULT_OUTPUT_REMINDER } from '../storyline/constants.js';
+import { EXTENSION_FOLDER, PERSPECTIVE_LABELS, VALID_PERSPECTIVES, BUILT_IN_FUNCTIONS, FUNCTION_MODE_LABELS, FUNCTION_MODE_HINTS, DEFAULT_STORYTELLER_PROMPT, DEFAULT_OUTPUT_REMINDER } from '../storyline/constants.js';
 import {
     isStorylineChat,
     getChatSettings,
@@ -835,7 +835,7 @@ export async function openChatSettingsPopup() {
                 toastr.warning(tr('The storyline linked to this chat no longer exists. Detach it from the Story Library, or restore the storyline.'), 'Storyline');
                 return;
             }
-            const content = await renderExtensionTemplateAsync('third-party/Storyline', 'templates/chat-settings');
+            const content = await renderExtensionTemplateAsync(EXTENSION_FOLDER, 'templates/chat-settings');
             hubRoot = $(content)[0];
             localizeTree(hubRoot);
             npcSearchTerm = '';

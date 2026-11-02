@@ -34,7 +34,7 @@ function normalizeCached(id, raw) {
         const { storyline: normalized } = normalizeStoryline(keyed);
         storyline = normalized;
     } catch (error) {
-        console.warn(`[${'Storyline'}] Failed to load storyline ${id}:`, error);
+        console.warn(`[Storyline] Failed to load storyline ${id}:`, error);
         storyline = null;
     }
     storylineCache.set(id, { raw, storyline });

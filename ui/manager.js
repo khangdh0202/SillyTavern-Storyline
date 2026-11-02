@@ -1,4 +1,5 @@
 import { renderExtensionTemplateAsync } from '../../../../../scripts/extensions.js';
+import { EXTENSION_FOLDER } from '../storyline/constants.js';
 import { Popup, POPUP_TYPE, POPUP_RESULT, callGenericPopup } from '../../../../../scripts/popup.js';
 import { eventSource, event_types } from '../../../../../script.js';
 import { getStorylines, getStoryline, deleteStoryline, duplicateStoryline, importStoryline, exportStoryline, countStorylines } from '../storyline/storage.js';
@@ -449,7 +450,7 @@ export async function openStorylineManager() {
     if (managerOpening) return managerOpening;
     managerOpening = (async () => {
         try {
-            const content = await renderExtensionTemplateAsync('third-party/Storyline', 'templates/manager');
+            const content = await renderExtensionTemplateAsync(EXTENSION_FOLDER, 'templates/manager');
             managerRoot = $(content)[0];
             localizeTree(managerRoot);
             managerListEl = managerRoot.querySelector('#storyline_mgr_list');
