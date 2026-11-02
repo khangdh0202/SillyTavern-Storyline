@@ -1,3 +1,4 @@
+/* Storyline — Copyright (C) 2026 kdturtle — GPL-3.0, see LICENSE. */
 import { characters, getOneCharacter } from '../../../../../script.js';
 import { CHARS_PER_TOKEN } from './constants.js';
 

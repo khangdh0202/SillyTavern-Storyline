@@ -1,3 +1,4 @@
+/* Storyline — Copyright (C) 2026 kdturtle — GPL-3.0, see LICENSE. */
 import { Popup, POPUP_TYPE, POPUP_RESULT, callGenericPopup } from '../../../../../scripts/popup.js';
 import { getContext } from '../../../../../scripts/st-context.js';
 import { PERSPECTIVE_LABELS } from './constants.js';

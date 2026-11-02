@@ -1,3 +1,4 @@
+/* Storyline — Copyright (C) 2026 kdturtle — GPL-3.0, see LICENSE. */
 /* Shared UI helpers for the Storyline extension. Pure DOM/time utilities:
    no state, safe to use from any ui/* module. */
 

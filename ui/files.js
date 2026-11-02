@@ -1,3 +1,4 @@
+/* Storyline — Copyright (C) 2026 kdturtle — GPL-3.0, see LICENSE. */
 export function downloadStorylineJson(storyline) {
     if (!storyline) return;
     const blob = new Blob([JSON.stringify(storyline, null, 4)], { type: 'application/json' });

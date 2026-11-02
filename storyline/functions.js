@@ -1,3 +1,4 @@
+/* Storyline — Copyright (C) 2026 kdturtle — GPL-3.0, see LICENSE. */
 import { generateRaw } from '../../../../../script.js';
 import { ToolManager } from '../../../../../scripts/tool-calling.js';
 import { BUILT_IN_FUNCTIONS, FUNCTION_MODES } from './constants.js';

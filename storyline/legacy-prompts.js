@@ -1,3 +1,4 @@
+/* Storyline — Copyright (C) 2026 kdturtle — GPL-3.0, see LICENSE. */
 /* Fingerprints of built-in texts that shipped in earlier versions. Kept ONLY
    so a storyline (or chat override) that saved one of them verbatim is
    recognised as "built-in" and follows the current default instead of

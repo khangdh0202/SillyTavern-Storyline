@@ -1,3 +1,4 @@
+/* Storyline — Copyright (C) 2026 kdturtle — GPL-3.0, see LICENSE. */
 /* Vietnamese UI strings: editor. English source text -> Vietnamese. */
 export default {
     // Banner / image files

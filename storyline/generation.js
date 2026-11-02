@@ -1,3 +1,4 @@
+/* Storyline — Copyright (C) 2026 kdturtle — GPL-3.0, see LICENSE. */
 import { eventSource, event_types, stopGeneration } from '../../../../../script.js';
 import { buildStorylineContext } from './context.js';
 import { readChatState } from './chat.js';

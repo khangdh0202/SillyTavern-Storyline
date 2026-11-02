@@ -1,3 +1,4 @@
+/* Storyline — Copyright (C) 2026 kdturtle — GPL-3.0, see LICENSE. */
 import { characters, getCharacters, getRequestHeaders, system_avatar, getThumbnailUrl } from '../../../../../script.js';
 import { getPermanentAssistantAvatar, openPermanentAssistantChat } from '../../../../../scripts/welcome-screen.js';
 import { getContext } from '../../../../../scripts/st-context.js';

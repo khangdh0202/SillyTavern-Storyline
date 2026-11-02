@@ -1,3 +1,4 @@
+/* Storyline — Copyright (C) 2026 kdturtle — GPL-3.0, see LICENSE. */
 export const STORAGE_KEY = 'storyline';
 export const CHAT_METADATA_KEY = 'storyline';
 export const SCHEMA_VERSION = 1;

@@ -1,3 +1,4 @@
+/* Storyline — Copyright (C) 2026 kdturtle — GPL-3.0, see LICENSE. */
 /* Vietnamese UI strings: library. English source text -> Vietnamese. */
 export default {
     /* Story Library (ui/manager.js) */

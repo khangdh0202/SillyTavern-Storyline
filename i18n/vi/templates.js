@@ -1,3 +1,4 @@
+/* Storyline — Copyright (C) 2026 kdturtle — GPL-3.0, see LICENSE. */
 /* Vietnamese UI strings: templates/*.html (matched by localizeTree on
    whitespace-normalized text / innerHTML / placeholder / title). */
 export default {

@@ -1,3 +1,4 @@
+/* Storyline — Copyright (C) 2026 kdturtle — GPL-3.0, see LICENSE. */
 import { getLocalVariable, setLocalVariable } from '../../../../../scripts/variables.js';
 
 export const STORYLINE_DATA_VARIABLE = 'storylineState';

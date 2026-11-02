@@ -1,3 +1,4 @@
+/* Storyline — Copyright (C) 2026 kdturtle — GPL-3.0, see LICENSE. */
 /* Multi-select character card picker (v0.2.0): searchable list with avatar
    thumbnails. Used by the editor's "Add characters" — replaces the old
    one-dropdown-per-row flow where every cast member was a separate

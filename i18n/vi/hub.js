@@ -1,3 +1,4 @@
+/* Storyline — Copyright (C) 2026 kdturtle — GPL-3.0, see LICENSE. */
 /* Vietnamese UI strings: hub. English source text -> Vietnamese. */
 export default {
     /* Send-form button */

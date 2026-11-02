@@ -1,3 +1,4 @@
+/* Storyline — Copyright (C) 2026 kdturtle — GPL-3.0, see LICENSE. */
 import { eventSource, event_types } from '../../../../script.js';
 import { initGenerationHooks } from './storyline/generation.js';
 import { relabelNarrativeMessage, isStorylineChat } from './storyline/chat.js';

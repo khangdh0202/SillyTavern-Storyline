@@ -1,3 +1,4 @@
+/* Storyline — Copyright (C) 2026 kdturtle — GPL-3.0, see LICENSE. */
 /* Shared strings: constants displayed in the UI (perspective/mode labels,
    function catalog), companion integrations and generic buttons. */
 export default {

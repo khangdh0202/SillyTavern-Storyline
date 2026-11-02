@@ -1,3 +1,4 @@
+/* Storyline — Copyright (C) 2026 kdturtle — GPL-3.0, see LICENSE. */
 import { getContext } from '../../../../../scripts/st-context.js';
 import { substituteParams } from '../../../../../script.js';
 import { world_info_case_sensitive, world_info_match_whole_words, parseRegexFromString } from '../../../../../scripts/world-info.js';

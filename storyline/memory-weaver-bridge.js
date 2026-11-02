@@ -1,3 +1,4 @@
+/* Storyline — Copyright (C) 2026 kdturtle — GPL-3.0, see LICENSE. */
 /* Memory Weaver bridge (passive, read-only).
  *
  * Memory Weaver records the chat's long-term memories in a chat-local

@@ -1,3 +1,4 @@
+/* Storyline — Copyright (C) 2026 kdturtle — GPL-3.0, see LICENSE. */
 /* Vietnamese UI dictionary: English source text -> Vietnamese. Split by area
    so each file stays reviewable; later files win on a duplicate key. */
 import common from './vi/common.js';

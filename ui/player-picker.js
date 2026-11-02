@@ -1,3 +1,4 @@
+/* Storyline — Copyright (C) 2026 kdturtle — GPL-3.0, see LICENSE. */
 /* Player card picker (shared): used when starting a new Storyline chat and
    when changing the player card of an existing chat. Returns the chosen
    avatar string, '' for "Persona (default)", or null when cancelled. */

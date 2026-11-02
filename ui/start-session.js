@@ -1,3 +1,4 @@
+/* Storyline — Copyright (C) 2026 kdturtle — GPL-3.0, see LICENSE. */
 /* Start Session screen (v0.2.0): ONE popup before a session is created —
    pitch, "You play as", opening choice and a single Start button. Replaces
    the old two-step flow (player picker, then a scenario picker whose "Skip"

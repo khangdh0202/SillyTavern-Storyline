@@ -1,3 +1,4 @@
+/* Storyline — Copyright (C) 2026 kdturtle — GPL-3.0, see LICENSE. */
 import { chat, chat_metadata, clearChat, addOneMessage, saveChatConditional, saveChatDebounced, selectCharacterById, openCharacterChat, characters, createOrEditCharacter, getPastCharacterChats } from '../../../../../script.js';
 import { saveMetadataDebounced } from '../../../../../scripts/extensions.js';
 import { Popup, POPUP_TYPE } from '../../../../../scripts/popup.js';

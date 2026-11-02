@@ -1,3 +1,4 @@
+/* Storyline — Copyright (C) 2026 kdturtle — GPL-3.0, see LICENSE. */
 import { chat, name1, max_context, substituteParams, getMaxPromptTokens } from '../../../../../script.js';
 import { power_user } from '../../../../../scripts/power-user.js';
 import { IGNORE_SYMBOL } from '../../../../../scripts/constants.js';
