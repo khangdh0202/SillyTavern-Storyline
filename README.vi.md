@@ -16,6 +16,8 @@
 
 **Storyline** thêm một chế độ chat mới vào SillyTavern: assistant trở thành **Người Kể Chuyện (Storyteller)** — thuật lại thế giới quanh nhân vật của bạn bằng văn xuôi liên tục. Không nhãn nhân vật, không lượt nói, không cần một character card đóng vai người dẫn chuyện. Bạn gõ nhân vật làm gì; câu chuyện tự triển khai xung quanh họ.
 
+**Thể loại nào cũng được:** phiêu lưu, đời thường, mô phỏng (sim), trinh thám, tình cảm, kinh dị, học đường hay công sở. Đổ xúc xắc và bảng chỉ số chỉ là phần thêm tuỳ chọn khi bạn muốn chơi kiểu RPG.
+
 ```
 Character Chat:  một nhân vật đang nói với tôi.
 Group Chat:      vài nhân vật đang nói với tôi.

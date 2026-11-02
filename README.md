@@ -16,6 +16,8 @@
 
 **Storyline** adds a new chat mode to SillyTavern: the assistant becomes the **Storyteller** — narrating the world around your character in continuous narrative prose. No character labels, no speaker turns, no character card playing the narrator. You type what your character does; a story unfolds around them.
 
+**Any genre works:** adventure, slice-of-life, life sim, mystery, romance, horror, school or workplace drama. Dice rolls and character sheets are optional add-ons for when you want RPG mechanics.
+
 ```
 Character Chat:  a character is talking to me.
 Group Chat:      several characters are talking to me.
