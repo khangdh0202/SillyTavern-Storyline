@@ -2301,6 +2301,23 @@ body.storyline-active #rm_button_selected_ch {
     margin: 0;
 }
 
+.storyline_field_meta_wrap {
+    flex-wrap: wrap;
+}
+
+/* Fixed width so the longest option doesn't stretch it; the open list still
+   shows each option in full. */
+.storyline_theme select.storyline_genre_template {
+    width: 12.5em;
+    min-width: 0;
+    max-width: 100%;
+    flex: 0 1 auto;
+    margin: 0;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-size: 0.85rem;
+}
+
 /* Identity card: banner + title/category/language. */
 .storyline_identity {
     display: flex;

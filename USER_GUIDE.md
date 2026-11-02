@@ -94,6 +94,8 @@ Every field that reaches the AI carries a **Sent to AI** chip; the Pitch carries
 
 Narration Style and Output Reminder can be overridden **per chat** (section 10).
 
+**Genre templates.** Under Story Rules, the **+ Genre template…** picker adds a short, editable block for one genre (Adventure, Slice of Life, Life Sim, Mystery, Romance, Horror, Comedy): tone, pacing and the kind of complications that fit. It is appended to the end of your Story Rules and never replaces what is there; adding the same genre twice only shows a warning. Mix two if the story needs it (Romance + Mystery), and rewrite the text freely. It costs tokens only while it sits in the field.
+
 Editor conventions:
 
 - Every long text field has an **expand** button — a large editor with a live character/token counter.

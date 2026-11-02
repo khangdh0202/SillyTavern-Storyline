@@ -28,6 +28,7 @@ import {
     MAX_CHARACTERS,
     HOST_CARD_PREFIX,
 } from '../storyline/constants.js';
+import { GENRE_TEMPLATES, appendGenreTemplate } from '../storyline/genres.js';
 import { downloadStorylineJson } from './files.js';
 import { pickCards } from './card-picker.js';
 import { buildChip, makeEl, makeButton, safeBannerDataUrl, upgradeControl } from './util.js';
@@ -1308,6 +1309,29 @@ async function openStorylineEditorInner(storylineId, { onSaved } = {}) {
         toastr.success(tr('Merged into the Pitch. Save to keep it.'), 'Storyline');
     });
     refreshLegacyNote();
+
+    /* Genre templates: picking one appends it to the Story Rules, then the
+       picker resets so the same genre can't be added by accident twice. */
+    const genrePicker = root.querySelector('#storyline_editor_genre_template');
+    for (const genre of GENRE_TEMPLATES) {
+        genrePicker.append(new Option(`${tr(genre.label)} — ${tr(genre.hint)}`, genre.id));
+    }
+    genrePicker.addEventListener('change', () => {
+        const genreId = genrePicker.value;
+        genrePicker.value = '';
+        if (!genreId) return;
+        const rules = root.querySelector('#storyline_editor_prompt_guideline');
+        const label = tr(GENRE_TEMPLATES.find(item => item.id === genreId).label);
+        const { text, added } = appendGenreTemplate(rules.value, genreId);
+        if (!added) {
+            toastr.warning(tr('The {genre} template is already in the Story Rules.', { genre: label }), 'Storyline');
+            return;
+        }
+        rules.value = text;
+        rules.dispatchEvent(new Event('input', { bubbles: true }));
+        rules.scrollTop = rules.scrollHeight;
+        toastr.success(tr('Added the {genre} template to the Story Rules — edit it freely, then Save.', { genre: label }), 'Storyline');
+    });
 
     /* Openings */
     const scenariosList = root.querySelector('#storyline_editor_scenarios');

@@ -94,6 +94,8 @@ Mọi field được gửi cho AI có chip **Sent to AI**; Pitch có chip **Play
 
 Narration Style và Output Reminder có thể override **theo chat** (mục 10).
 
+**Mẫu thể loại.** Dưới Story Rules, ô chọn **+ Genre template…** thêm một đoạn ngắn, sửa được, cho một thể loại (Phiêu lưu, Đời thường, Mô phỏng cuộc sống, Trinh thám, Lãng mạn, Kinh dị, Hài): giọng điệu, nhịp truyện và kiểu tình huống hợp với thể loại đó. Đoạn mẫu được thêm vào cuối Story Rules, không bao giờ ghi đè nội dung đang có; chèn trùng thể loại chỉ hiện cảnh báo. Có thể kết hợp hai thể loại (Lãng mạn + Trinh thám) và sửa nội dung tuỳ ý. Mẫu chỉ tốn token khi còn nằm trong ô.
+
 Quy ước của editor:
 
 - Mọi ô văn bản dài có nút **mở rộng** — editor lớn với bộ đếm ký tự/token trực tiếp.

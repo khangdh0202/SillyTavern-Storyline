@@ -70,6 +70,8 @@ export default {
     'Story Rules': 'Luật truyện',
     'How this world behaves: consequences, fail states, tone limits, no railroading. These rules win over the Narration Style.': 'Thế giới này vận hành thế nào: hậu quả, khi nào thất bại, giới hạn giọng điệu, không ép cốt truyện. Các luật này thắng Phong cách kể.',
     'Choices have lasting consequences, and death is possible. NPCs pursue their own goals, even off-screen. Keep the supernatural rare and frightening. Never push {{user}} toward one side.': 'Lựa chọn để lại hậu quả lâu dài, và có thể chết. NPC theo đuổi mục tiêu riêng, kể cả khi không xuất hiện. Giữ yếu tố siêu nhiên hiếm hoi và đáng sợ. Không bao giờ đẩy {{user}} về một phe.',
+    '+ Genre template…': '+ Mẫu thể loại…',
+    'Adds an editable genre template (tone, pacing, complications) to the end of the Story Rules.': 'Thêm một mẫu thể loại (giọng điệu, nhịp truyện, tình huống) vào cuối Luật truyện, sửa thoải mái được.',
     'Key Facts': 'Sự thật then chốt',
     'Short facts the AI must never forget: secrets, relationships, unresolved threads. Keep it brief — long lists make replies rigid.': 'Những sự thật ngắn AI không được quên: bí mật, quan hệ, mạch truyện còn bỏ ngỏ. Viết ngắn thôi — danh sách dài làm câu trả lời cứng nhắc.',
     'Orsa put out the Ninth Lamp herself. Tidewalkers cannot cross running fresh water. Wren owes {{user}} a life debt.': 'Orsa tự tay dập tắt Ngọn đèn thứ chín. Kẻ Theo Triều không vượt qua được nước ngọt đang chảy. Wren nợ {{user}} một mạng.',

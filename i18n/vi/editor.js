@@ -160,4 +160,22 @@ export default {
     'Storyline "{title}" saved.': 'Đã lưu Storyline "{title}".',
     'Story avatar updated with the new banner.': 'Đã cập nhật avatar truyện bằng ảnh bìa mới.',
     'The banner was saved, but the story avatar could not be updated.': 'Đã lưu ảnh bìa, nhưng không cập nhật được avatar truyện.',
+
+    // Genre templates (Story Rules)
+    'Adventure': 'Phiêu lưu',
+    'journeys, danger, discovery': 'hành trình, hiểm nguy, khám phá',
+    'Slice of Life': 'Đời thường',
+    'everyday moments, small stakes': 'khoảnh khắc thường ngày, chuyện nhỏ',
+    'Life Sim': 'Mô phỏng cuộc sống',
+    'building a life over time': 'xây dựng cuộc sống theo thời gian',
+    'Mystery': 'Trinh thám',
+    'clues, suspects, fair play': 'manh mối, nghi phạm, chơi đẹp',
+    'Romance': 'Lãng mạn',
+    'slow burn, a relationship that grows': 'tình cảm chậm rãi, mối quan hệ lớn dần',
+    'Horror': 'Kinh dị',
+    'dread, a threat not understood': 'nỗi sợ, mối đe doạ chưa hiểu rõ',
+    'Comedy': 'Hài',
+    'misunderstandings, plans that backfire': 'hiểu lầm, kế hoạch phản tác dụng',
+    'The {genre} template is already in the Story Rules.': 'Mẫu {genre} đã có trong Luật truyện.',
+    'Added the {genre} template to the Story Rules — edit it freely, then Save.': 'Đã thêm mẫu {genre} vào Luật truyện — sửa tuỳ ý rồi bấm Lưu.',
 };

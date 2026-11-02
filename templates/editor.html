@@ -163,7 +163,13 @@
                 <div class="storyline_card_title"><i class="fa-solid fa-compass fa-fw"></i> Story Rules <span class="storyline_audience storyline_audience_ai"><i class="fa-solid fa-robot fa-fw"></i>Sent to AI</span></div>
                 <div class="storyline_field_hint">How this world behaves: consequences, fail states, tone limits, no railroading. These rules win over the Narration Style.</div>
                 <textarea id="storyline_editor_prompt_guideline" class="storyline_control storyline_textarea" rows="4" placeholder="Choices have lasting consequences, and death is possible. NPCs pursue their own goals, even off-screen. Keep the supernatural rare and frightening. Never push &#123;&#123;user&#125;&#125; toward one side."></textarea>
-                <div class="storyline_field_meta"><span class="storyline_macro_chip">&#123;&#123;user&#125;&#125;</span><span class="storyline_field_tokens" data-token-live="storyline_editor_prompt_guideline"></span></div>
+                <div class="storyline_field_meta storyline_field_meta_wrap">
+                    <span class="storyline_macro_chip">&#123;&#123;user&#125;&#125;</span>
+                    <select id="storyline_editor_genre_template" class="storyline_control storyline_genre_template" title="Adds an editable genre template (tone, pacing, complications) to the end of the Story Rules.">
+                        <option value="">+ Genre template…</option>
+                    </select>
+                    <span class="storyline_field_tokens" data-token-live="storyline_editor_prompt_guideline"></span>
+                </div>
             </div>
 
             <div class="storyline_card">
