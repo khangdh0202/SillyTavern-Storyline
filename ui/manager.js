@@ -341,11 +341,13 @@ function renderList({ highlightId = null } = {}) {
             });
             emptyActions.append(clear);
         } else {
-            const create = makeButton({ icon: 'fa-solid fa-plus', label: tr('Create a storyline'), className: 'menu_button interactable storyline_button storyline_button_primary' });
+            const example = makeButton({ icon: 'fa-solid fa-play', label: tr('Play the example story'), className: 'menu_button interactable storyline_button storyline_button_primary' });
+            example.addEventListener('click', () => runUiAction(example, onPlayExampleClick));
+            const create = makeButton({ icon: 'fa-solid fa-plus', label: tr('Create a storyline') });
             create.addEventListener('click', () => openEditor(null));
             const importButton = makeButton({ icon: 'fa-solid fa-file-import', label: tr('Import JSON') });
             importButton.addEventListener('click', () => onImportClick());
-            emptyActions.append(create, importButton);
+            emptyActions.append(example, create, importButton);
         }
         empty.append(emptyActions);
         managerListEl.append(empty);
@@ -379,6 +381,31 @@ async function onImportClick() {
         toastr.error(result.error ?? tr('Import failed.'), 'Storyline');
     }
     refreshManager({ highlightId: result.ok ? result.storyline.id : null });
+}
+
+/* First-run shortcut: import the bundled sample (examples/sample-storyline.json)
+   and open its Start screen. Cancel on Start keeps the imported copy in the library. */
+async function onPlayExampleClick() {
+    let jsonText;
+    try {
+        const response = await fetch(`/scripts/extensions/${EXTENSION_FOLDER}/examples/sample-storyline.json`);
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        jsonText = await response.text();
+    } catch (error) {
+        toastr.error(tr('Could not load the example story: {message}', { message: error.message }), 'Storyline');
+        return;
+    }
+    const result = importStoryline(jsonText);
+    if (!result.ok) {
+        toastr.error(result.error ?? tr('Import failed.'), 'Storyline');
+        return;
+    }
+    refreshManager({ highlightId: result.storyline.id });
+    if (await startStorylineChat(result.storyline.id)) {
+        refreshChatSettingsButton();
+        refreshManager();
+        await managerPopup?.complete(POPUP_RESULT.AFFIRMATIVE);
+    }
 }
 
 async function onAttachClick() {

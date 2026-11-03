@@ -37,6 +37,8 @@ export default {
     'Try a different search or category.': 'Hãy thử từ khoá hoặc thể loại khác.',
     'A storyline is a world + a narrator: write the premise, add an opening, and press Play. Characters and extras are optional.': 'Một Storyline là một thế giới + một người kể chuyện: viết tiền đề, thêm một mở đầu rồi bấm Chơi. Nhân vật và phần mở rộng là tuỳ chọn.',
     'Reset filters': 'Xoá bộ lọc',
+    'Play the example story': 'Chơi truyện mẫu',
+    'Could not load the example story: {message}': 'Không tải được truyện mẫu: {message}',
     'Create a storyline': 'Tạo Storyline',
     'Import JSON': 'Nhập JSON',
     'Imported storyline "{title}".': 'Đã nhập Storyline "{title}".',

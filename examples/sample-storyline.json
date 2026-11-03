@@ -32,6 +32,8 @@
     "functions": {
         "entries": {
             "character_name_generator": { "mode": "default_on", "instruction": "" },
+            "world_state": { "mode": "default_on", "instruction": "" },
+            "dice_roller": { "mode": "default_on", "instruction": "" },
             "memory_keeper": { "mode": "default_on", "instruction": "" }
         },
         "prompt": "",

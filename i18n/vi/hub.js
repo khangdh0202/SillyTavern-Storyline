@@ -3,6 +3,7 @@
 export default {
     /* Send-form button */
     'Storyline — open the story hub': 'Storyline — mở Story Hub',
+    'Story': 'Truyện',
     'Storyline — {title}': 'Storyline — {title}',
     '1 NPC recorded': 'Đã ghi 1 NPC',
     '{n} NPCs recorded': 'Đã ghi {n} NPC',
@@ -18,6 +19,11 @@ export default {
     'No functions': 'Không có chức năng',
     'World state': 'Trạng thái thế giới',
     'No function calling': 'Không có function calling',
+    'Not connected': 'Chưa kết nối',
+    'Open API Connections': 'Mở API Connections',
+    'Not connected to an API — tool functions run once you connect (context-only ones are already in the prompt).': 'Chưa kết nối API — các chức năng dạng tool sẽ chạy khi bạn kết nối (chức năng chỉ thêm ngữ cảnh đã nằm trong prompt).',
+    'The current model or API does not support function calling — tool functions cannot run right now (context-only ones still work). Pick a model that supports tool calling and turn on "Enable function calling" in AI Response Configuration.': 'Model hoặc API hiện tại không hỗ trợ function calling — các chức năng dạng tool chưa chạy được lúc này (chức năng chỉ thêm ngữ cảnh vẫn hoạt động). Hãy chọn model hỗ trợ tool calling và bật "Enable function calling" trong AI Response Configuration.',
+    'Not connected to an API — you can start, but the storyteller cannot reply until you connect one in API Connections (the plug icon in the top bar).': 'Chưa kết nối API — bạn vẫn bắt đầu được, nhưng người kể chuyện chưa trả lời được cho tới khi bạn kết nối trong API Connections (icon phích cắm trên thanh trên cùng).',
     'Measure': 'Đo',
     'Build the prompt now to measure it (no message is sent)': 'Dựng prompt ngay để đo kích thước (không gửi tin nhắn nào)',
     'Not measured yet in this session — press Measure, or send a message.': 'Chưa đo trong phiên này — bấm Đo hoặc gửi một tin nhắn.',

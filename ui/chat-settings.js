@@ -45,8 +45,9 @@ function buildChatSettingsButton() {
     button.setAttribute('role', 'button');
     button.setAttribute('aria-label', tr('Storyline — open the story hub'));
     const icon = makeEl('i', 'fa-solid fa-book-open storyline_sendform_icon');
+    const label = makeEl('span', 'storyline_sendform_label', tr('Story'));
     const badge = makeEl('span', 'storyline_sendform_badge', '0');
-    button.append(icon, badge);
+    button.append(icon, label, badge);
     button.addEventListener('click', () => openChatSettingsPopup());
     button.addEventListener('keydown', (event) => {
         if (event.key === 'Enter' || event.key === ' ') {
@@ -64,9 +65,13 @@ function ensureChatSettingsButton() {
     if (!chatSettingsButton) {
         chatSettingsButton = buildChatSettingsButton();
     }
-    const leftForm = document.querySelector('#leftSendForm');
-    if (leftForm && chatSettingsButton.parentElement !== leftForm) {
-        leftForm.append(chatSettingsButton);
+    /* A labelled chip in the send form's chip row (next to Character Sheet /
+       Memory / Dice Weaver), not an icon in #leftSendForm under the ☰ button. */
+    const sendForm = document.querySelector('#send_form');
+    if (sendForm && (chatSettingsButton.parentElement !== sendForm || sendForm.firstElementChild !== chatSettingsButton)) {
+        /* Story leads the row: it is the mode the other chips plug into. They
+           may prepend themselves later, so this re-runs on every refresh. */
+        sendForm.prepend(chatSettingsButton);
     }
     return chatSettingsButton.isConnected;
 }
@@ -175,7 +180,7 @@ function renderHero(root, storyline, chatState) {
         chips.push(buildChip({ icon: 'fa-solid fa-heart-pulse', label: tr('World state'), tone: 'accent' }));
     }
     if (activeFunctions.length && !isFunctionCallingAvailable()) {
-        chips.push(buildChip({ icon: 'fa-solid fa-triangle-exclamation', label: tr('No function calling'), tone: 'warn' }));
+        chips.push(buildChip({ icon: 'fa-solid fa-triangle-exclamation', label: isApiOffline() ? tr('Not connected') : tr('No function calling'), tone: 'warn' }));
     }
     root.querySelector('#storyline_hub_chips').replaceChildren(...chips);
 }
@@ -751,7 +756,35 @@ function renderFunctions(root, storyline, chatState) {
     }
 
     root.querySelector('#storyline_hub_functions_card')?.classList.toggle('storyline_hidden', !togglesContainer.children.length);
-    root.querySelector('#storyline_functions_warning')?.classList.toggle('storyline_hidden', isFunctionCallingAvailable());
+    renderFunctionsWarning(root.querySelector('#storyline_functions_warning'));
+}
+
+/* "No connection" and "this model can't call tools" need different fixes:
+   say which one it is and point at where to fix it. */
+function isApiOffline() {
+    return getContext()?.onlineStatus === 'no_connection';
+}
+
+function renderFunctionsWarning(warning) {
+    if (!warning) return;
+    const available = isFunctionCallingAvailable();
+    warning.classList.toggle('storyline_hidden', available);
+    if (available) return;
+    const offline = isApiOffline();
+    const text = offline
+        ? tr('Not connected to an API — tool functions run once you connect (context-only ones are already in the prompt).')
+        : tr('The current model or API does not support function calling — tool functions cannot run right now (context-only ones still work). Pick a model that supports tool calling and turn on "Enable function calling" in AI Response Configuration.');
+    const span = makeEl('span', '', text);
+    const children = [makeEl('i', 'fa-solid fa-triangle-exclamation fa-fw'), span];
+    if (offline) {
+        const open = makeButton({ icon: 'fa-solid fa-plug', label: tr('Open API Connections'), className: 'menu_button interactable storyline_button' });
+        open.addEventListener('click', () => {
+            hubPopup?.complete(POPUP_RESULT.CANCELLED);
+            document.querySelector('#sys-settings-button .drawer-toggle')?.click();
+        });
+        children.push(open);
+    }
+    warning.replaceChildren(...children);
 }
 
 function renderFooter(root) {

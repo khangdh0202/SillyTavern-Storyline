@@ -1001,18 +1001,21 @@ body.storyline-active #rm_button_selected_ch {
  * ========================================================================= */
 
 /* ---------------------------------------------------------------------------
- * Send-form button: icon + live badge, anchored in #leftSendForm.
+ * Send-form chip: icon + "Story" label + live badge, in #send_form's chip row
+ * (same shape as the Dice Weaver / Character Sheet chips).
  * ------------------------------------------------------------------------ */
 
 #storyline_chat_settings {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
     height: auto;
     width: auto;
     opacity: 1;
-    margin-left: 5px;
-    padding: 4px 8px;
+    margin: 6px;
+    padding: 6px 12px;
+    line-height: 1.1;
+    font-weight: 600;
     border-radius: 10px;
     border: 1px solid var(--SmartThemeBorderColor);
     background: var(--black30a);
@@ -1055,6 +1058,19 @@ body.storyline-active #rm_button_selected_ch {
     opacity: 0.55;
 }
 
+/* Narrow send form: icon + badge only, like the Dice Weaver chip. */
+@media (max-width: 768px) {
+    #storyline_chat_settings {
+        gap: 5px;
+        margin: 4px;
+        padding: 5px 8px;
+    }
+
+    #storyline_chat_settings .storyline_sendform_label {
+        display: none;
+    }
+}
+
 /* The send-form/topbar badges live outside .storyline_theme, so the scoped
    .storyline_hidden rule above does not reach them. */
 #storyline_chat_settings .storyline_hidden,
@@ -1062,9 +1078,10 @@ body.storyline-active #rm_button_selected_ch {
     display: none !important;
 }
 
-#storyline_chat_settings.storyline_sf_warn {
-    border-color: rgba(251, 146, 60, 0.65);
-    box-shadow: 0 0 10px rgba(251, 146, 60, 0.25);
+/* Warn state (tools unavailable): only the icon turns orange — a coloured
+   outline on the chip read as "selected" next to the other chips. */
+#storyline_chat_settings.storyline_sf_warn .storyline_sendform_icon {
+    color: #fb923c;
 }
 
 #storyline_chat_settings.storyline_sf_warn .storyline_sendform_badge {

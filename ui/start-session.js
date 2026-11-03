@@ -84,6 +84,13 @@ export async function pickSessionStart(storyline) {
     hero.append(banner, heroMain);
     content.append(hero);
 
+    /* Starting works offline, but the opening is all you'd get: say so up front. */
+    if (getContext()?.onlineStatus === 'no_connection') {
+        const offline = makeEl('div', 'storyline_settings_hint storyline_function_warning');
+        offline.append(makeEl('i', 'fa-solid fa-triangle-exclamation fa-fw'), makeEl('span', '', tr('Not connected to an API — you can start, but the storyteller cannot reply until you connect one in API Connections (the plug icon in the top bar).')));
+        content.append(offline);
+    }
+
     /* You play as */
     const playerSection = makeEl('div', 'storyline_start_section');
     const playerHead = makeEl('div', 'storyline_start_section_head');
